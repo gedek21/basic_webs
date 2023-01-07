@@ -1,0 +1,15 @@
+{
+  "name": "basic-website",
+  "version": "1.0.0",
+  "description": "basic website with typescript",
+  "main": "index.js",
+  "repository": "https://github.com/gedek21/basic_webs.git",
+  "author": "Gede Kitchen Batara <gedekitchenbatara21@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
