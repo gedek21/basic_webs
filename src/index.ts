@@ -28,16 +28,21 @@ japanese_poem_data.forEach((data) => {
   card.classList.add("card");
 
   // Create the card header
-  let header: HTMLElement = document.createElement("div");
-  header.classList.add("card-header");
-  header.innerText = "Latest News";
+  let thumbnail: HTMLElement = document.createElement("div");
+  thumbnail.classList.add("card-img-container");
+
+  // Create the img element
+  let img: HTMLImageElement = document.createElement("img");
+  img.classList.add("card-img")
+  img.src = `./picture/${data.picture}`
+  img.alt = `image ${data.title}`
 
   // Create the card body
   let body: HTMLElement = document.createElement("div");
-  body.classList.add("card-body");
+  body.classList.add("card-content");
 
   // Create the title element
-  let title: HTMLElement = document.createElement("h4");
+  let title: HTMLElement = document.createElement("h2");
   title.classList.add("card-title");
   title.innerText = data.title;
 
@@ -46,16 +51,12 @@ japanese_poem_data.forEach((data) => {
   content.classList.add("card-text");
   content.innerText = data.description;
 
-  // Create the read more button
-//   let button: HTMLElement = document.createElement("a");
-//   button.classList.add("btn", "btn-primary");
-//   button.innerText = "Read More";
-//   button.href = "#";
-
   // Append the elements to the card
   body.appendChild(title);
   body.appendChild(content);
-  card.appendChild(header);
+  thumbnail.appendChild(img);
+  
+  card.appendChild(thumbnail);
   card.appendChild(body);
 
   // Append the card to the container
